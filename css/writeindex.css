@@ -1,0 +1,495 @@
+@charset "UTF-8";
+:root {
+  --my-hcolor:#333333;
+}
+
+body {
+  font-family: Georgia,'游明朝',YuMincho,'Hiragino Mincho Pron';
+  font-size: 16px;
+  color: #807B91;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/*===================================
+   header
+===================================*/
+header h1 {
+  margin: 20px 0  0 20px;
+  color: var(--my-hcolor);
+}
+
+header p {
+  margin-left: 20px;
+  margin-top: 0;
+  font-size: 13px;
+  color: #807B91;
+}
+
+header .humberger {
+  width: 40px;
+  height: auto;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+header .humberger span {
+  display: block;
+  content: '';
+  margin-top: 6.5px;
+  width: 70%;
+  height: 1px;
+  border: solid 0.7px var(--my-hcolor);
+  background: var(--my-hcolor);
+  transition: transform 0.5s,opacity 0.5s;
+}
+
+header .show .top {
+  transform: translateY(9px) rotate(45deg);
+}
+
+header .show .middle {
+  opacity: 0;
+}
+
+header .show .bottom {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+header nav {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 10;
+  position: absolute;
+}
+
+header nav ul {
+  padding-left: 0;
+}
+
+header nav ul li {
+  padding: 25px 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+header nav ul li a {
+  cursor: pointer;
+  color: var(--my-hcolor);
+  font-size: 20px;
+}
+
+.down_triangle {
+  display: none;
+}
+
+.open {
+  display: none;
+}
+
+/*=================================
+     メイン画像
+==================================*/
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  margin-top: 30px;
+}
+
+.explain {
+  margin: 40px 20px;
+  font-size: 23px;
+  color: #777;
+  line-height: 1.8;
+}
+
+/*============================
+    notice
+=============================*/
+.notice {
+  margin: 0 50px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.notice .noticebox {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.notice .noticebox h3 {
+  color: var(--my-hcolor);
+  font-size: 23px;
+}
+
+.notice .noticebox p {
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.notice span {
+  border: 1px solid #DDDDDD;
+  padding: 10px 15px;
+  margin-right: 5px;
+}
+
+.notice span:nth-child(1), .notice span:nth-child(2), .notice span:nth-child(3) {
+  display: none;
+}
+
+/*============================
+    footer
+=============================*/
+footer {
+  height: auto;
+  width: 100%;
+}
+
+footer .profile {
+  margin: 30px;
+  margin-bottom: 60px;
+}
+
+footer .profile .img_name_sns {
+  display: flex;
+}
+
+footer .profile .img_name_sns img {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  vertical-align: middle;
+  border-style: none;
+  margin-top: 0;
+}
+
+footer .profile .img_name_sns .profile_content {
+  padding-left: 15px;
+  display: inline-block;
+}
+
+footer .profile .img_name_sns .profile_content p {
+  font-weight: bold;
+  color: var(--my-hcolor);
+}
+
+footer .profile .img_name_sns .profile_content i {
+  padding: 4px;
+  font-size: 24px;
+}
+
+footer .profile .profile_text {
+  display: block;
+  line-height: 1.7;
+  color: #666;
+  font-size: 90%;
+}
+
+footer .footer_right {
+  margin: 0 30px 60px 30px;
+  font-size: 90%;
+}
+
+footer .footer_right .footer_right_h {
+  margin-bottom: 60px;
+  font-size: 12px;
+  color: var(--my-hcolor);
+}
+
+footer .recently {
+  margin-left: 30px;
+  font-size: 90%;
+  font-size: 13px;
+}
+
+footer .recently h3 {
+  color: var(--my-hcolor);
+  margin-bottom: 30px;
+  font-size: 13px;
+}
+
+footer .recently .recentbox {
+  margin-bottom: 30px;
+}
+
+footer .recently .recentbox a {
+  color: #666;
+  border-bottom: solid 1px #ddd;
+}
+
+footer .category {
+  margin-left: 30px;
+  color: var(--my-hcolor);
+  margin-bottom: 30px;
+  font-size: 13px;
+}
+
+footer .category ul {
+  padding-left: 0;
+}
+
+footer .category ul li {
+  padding: 10px 0;
+}
+
+footer .category ul li a {
+  color: #666;
+  border-bottom: solid 1px #ddd;
+}
+
+footer .searchbox {
+  border-bottom: solid 1px #ddd;
+  padding: 20px;
+  margin: 10px;
+}
+
+footer .searchbox input {
+  border: solid 1px #ddd;
+  width: 300px;
+  padding: 5px;
+}
+
+footer .sns {
+  margin: 60px 20px 30px 30px;
+}
+
+footer .sns i {
+  padding-right: 15px;
+  font-size: 24px;
+}
+
+footer .copyright {
+  font-size: 12px;
+  margin-left: 30px;
+}
+
+/*====================================
+          メディアクエリ
+====================================*/
+@media screen and (min-width: 640px) {
+  .pagebox span:nth-child(1), .pagebox span:nth-child(2), .pagebox span:nth-child(3) {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 783px) {
+  .open {
+    display: block;
+  }
+  body {
+    margin: 60px 40px;
+  }
+  header .header_title h1 {
+    font-size: 35px;
+    font-weight: 700;
+    margin-left: 0;
+  }
+  header .header_title p {
+    font-size: 18px;
+    padding-top: 8px;
+    margin-left: 0;
+    margin-bottom: 50px;
+  }
+  header .humberger {
+    display: none;
+  }
+  header #page a:hover {
+    color: #CFA450;
+  }
+  header nav {
+    width: 100%;
+    height: 52px;
+    position: relative;
+  }
+  header nav .nav_list {
+    display: flex;
+    flex-direction: row;
+    height: 52px;
+  }
+  header nav .nav_list li {
+    display: inline-block;
+    text-align-last: left;
+    padding: 0;
+    height: auto;
+    width: 100px;
+  }
+  header nav .nav_list li:nth-child(3) {
+    width: 150px;
+  }
+  header nav .nav_list li a {
+    font-size: 16px;
+  }
+  header nav .nav_list li a .down_triangle {
+    display: inline-block;
+    padding-left: 10px;
+    color: #666;
+    font-size: 12px;
+  }
+  header nav .nav_list li ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 250px;
+  }
+  header nav .nav_list li ul .nav_list_item {
+    display: none;
+  }
+  header nav .nav_list li ul li {
+    width: 250px;
+    height: 80px;
+    border: solid 1px #ddd;
+    background-color: #fff;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  header nav .nav_list li ul li a {
+    display: inline-block;
+    padding: 0 10px;
+  }
+  header nav .nav_list li ul li a:hover {
+    color: #CFA450;
+  }
+  header nav .nav_list li ul li:nth-child(1) {
+    margin-top: 20px;
+  }
+  header .header_form {
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  header .header_form i {
+    font-size: 18px;
+  }
+  header .header_form input {
+    border: solid 1px #ddd;
+    border: none;
+    display: none;
+  }
+  header .click_form {
+    border: solid 1px #ddd;
+    width: 220px;
+  }
+  header .click_form input {
+    display: inline-block;
+    width: 195px;
+    padding: 0;
+  }
+  header .click_form input:focus {
+    border-color: #fff;
+    outline: 0;
+  }
+  section {
+    margin: 40px auto;
+    display: block;
+    width: auto;
+  }
+  section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  footer {
+    font-size: 18px;
+  }
+  footer .recently {
+    font-size: 14px;
+  }
+  footer .recently h3 {
+    font-size: 16px;
+  }
+  footer .category {
+    font-size: 16px;
+  }
+  footer .copyright {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  header nav {
+    margin-left: 70px;
+  }
+  .notice {
+    margin-top: 60px;
+  }
+  .notice .noticebox {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+  .notice .noticebox .time {
+    width: 250px;
+    padding-top: 30px;
+  }
+  .notice .noticebox .noticebox_right {
+    margin-bottom: 50px;
+    width: 600px;
+  }
+  .notice .pagebox {
+    margin: 50px 250px;
+  }
+  .notice .pagebox span {
+    padding: 15px;
+  }
+  .main_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: solid 1px #ddd;
+    padding-bottom: 70px;
+    margin: 30px 50px;
+  }
+  .main_footer .profile {
+    margin: 0;
+    width: 250px;
+  }
+  .main_footer .footer_right {
+    width: 200px;
+  }
+  .main_footer .recently {
+    width: 200px;
+  }
+  .main_footer .searchbox {
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 100px;
+  }
+  .main_footer .searchbox input {
+    border: solid 1px #ddd;
+    width: 150px;
+    padding: 10px 5px;
+  }
+  .footer_sub {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+  .footer_sub .copyright {
+    position: absolute;
+    top: 50%;
+    right: 35%;
+  }
+}
+/*# sourceMappingURL=writeindex.css.map */
